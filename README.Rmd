@@ -21,13 +21,11 @@ library(DT)
 <!-- badges: start -->
 <!-- badges: end -->
 
-Este pacote disponibiliza o cardápio de comida vegana do restaurante virtual beleaf. 
+Este pacote disponibiliza o cardápio de comida vegana do restaurante virtual [beleaf](https://www.beleaf.com.br/cardapio-marmitas-veganas) 
 
-## Installation
+## Instalação
 
 O pacote `marmitavegana` está em desenvolvimento. A versão em progresso pode ser instalada a partir no [GitHub](https://github.com/) como segue:
-
-You can install the released version of marmitavegana from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
 # install.packages("devtools")
@@ -40,18 +38,18 @@ O pacote `marmitavegana` pode ser carregado como qualquer outro pacote do R:
 ```{r}
 library(marmitavegana)
 library(magrittr)
-library(DT)
 ```
 
 Após o pacote ser carregado, a função `buscar_marmitas_veganas` pode ser utilizada para exibir as opções de pratos: 
 
 ```{r ex. buscar_marmitas_veganas}
 buscar_marmitas_veganas() %>% 
+  head() %>% 
   knitr::kable()
 ```
 
-A escolha aleatória de uma refeição (`Prato`, `Sopa`, `Doce`) que tenha valor inferior a R$ 20,00 pode ser feita utilizando a função `sortear_marmita`, conforme mostrado a seguir:
+A escolha aleatória de uma refeição (`Prato`, `Sopa`, `Doce`) que tenha valor inferior a R$ 40,00 pode ser feita utilizando a função `sortear_marmita`, conforme mostrado a seguir:
 
 ```{r ex. sortear_marmita}
-sortear_marmita(tipo = "Prato", preco_maximo = 20)
+sortear_marmita(tipo = "Prato", preco_maximo = 40)
 ```
