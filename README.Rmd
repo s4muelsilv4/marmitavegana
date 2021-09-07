@@ -44,11 +44,12 @@ Após o pacote ser carregado, a função `buscar_marmitas_veganas` pode ser util
 
 ```{r ex. buscar_marmitas_veganas}
 buscar_marmitas_veganas() %>% 
-  head() %>% 
+  head(5) %>% 
   knitr::kable()
 ```
+Neste exemplo apenas 5 pratos, `head(5)`, foram mostrados.
 
-A escolha aleatória de uma refeição (`Prato`, `Sopa`, `Doce`) que tenha valor inferior a R$ 40,00 pode ser feita utilizando a função `sortear_marmita`, conforme mostrado a seguir:
+A escolha aleatória de uma refeição (`"Prato"`, `"Sopa"`, `"Doce"`) que tenha valor inferior a R$ 40,00 pode ser feita utilizando a função `sortear_marmita`, conforme mostrado a seguir:
 
 ```{r ex. sortear_marmita}
 sortear_marmita(tipo = "Prato", preco_maximo = 40)
