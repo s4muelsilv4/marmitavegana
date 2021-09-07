@@ -1,4 +1,4 @@
-# funcao 1.  obter a base de marmitas -------------------------------------
+# funcao 1. obter a base de marmitas -------------------------------------
 buscar_marmitas_veganas <- function() {
   html <- "https://www.beleaf.com.br/cardapio-marmitas-veganas" %>%
     xml2::read_html()
@@ -37,9 +37,9 @@ sortear_marmita <-
       dplyr::slice_sample() %>%
       dplyr::mutate(
         texto = glue::glue(
-          "Refeição  sugerida: {nome} \n
+          "Refeicao  sugerida: {nome} \n
       Ingredientes: {descricao} \n
-      Preço: R$ {preco} \n
+      Preco: R$ {preco} \n
       Acesse o site: {url}"
         )
       ) %>%
