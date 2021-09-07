@@ -13,7 +13,6 @@ knitr::opts_chunk$set(
 )
 
 library(magrittr)
-library(DT)
 ```
 
 # marmitavegana <img src="man/figures/marmitavegana_hex.png" align="right" width = "120px"/>

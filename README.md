@@ -54,11 +54,11 @@ tenha valor inferior a R$ 40,00 pode ser feita utilizando a função
 
 ``` r
 sortear_marmita(tipo = "Prato", preco_maximo = 40)
-#> Refeicao  sugerida: BOWL DE GRÃO DE BICO E TOMATE CONFIT 
+#> Refeicao  sugerida: RAGU DEFUMADO DE JACA VERDE 
 #> 
-#> Ingredientes: Couve-flor na páprica e vegetais mediterrâneos 
+#> Ingredientes: Polenta cremosa e cenoura assada 
 #> 
-#> Preco: R$ 20.9 
+#> Preco: R$ 23.9 
 #> 
-#> Acesse o site: https://www.beleaf.com.br/bowl-de-grao-de-bico-e-tomate-confit
+#> Acesse o site: https://www.beleaf.com.br/ragu-defumado-de-jaca-verde
 ```
