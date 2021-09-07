@@ -1,4 +1,12 @@
 # funcao 1. obter a base de marmitas -------------------------------------
+#' Exibir as marmitas vegenas disponiveis no beleaf
+#'
+#' @return retorna um tibble com 38 linhas e 6 colunas
+#' @export
+#'
+#' @examples
+#' # exibir cardapio
+#' buscar_marmitas_veganas()
 buscar_marmitas_veganas <- function() {
   html <- "https://www.beleaf.com.br/cardapio-marmitas-veganas" %>%
     xml2::read_html()
@@ -29,10 +37,30 @@ buscar_marmitas_veganas <- function() {
 }
 
 
-# funcao 2. sortear uma marmita, usando a base de marmitas do pacote ------
+# funcao 2. sortear uma marmita usando a base de marmitas do pacote -------
+#' Sortear aleatoriamente uma marmita disponivel no beleaf a partir do(s) tipo(s) de refeicao(oes) e de um preco maximo
+#'
+#' @param tipo Um vetor de caracteres informando a refeicao: As opcoes disponiveis sao: "Sopa", "Prato", "Doce". O default e c("Sopa", "Prato", "Doce")
+#' @param preco_maximo Um inteiro maior que zero
+#'
+#' @return retorna um vetor de caracteres de comprimento 1
+#' @export
+#'
+#' @examples
+#' # saida default da funcao
+#' sortear_marmita()
+#'
+#' # opcoes de sopa
+#' sortear_marmita(tipo = "Sopa")
+#'
+#' # opcoes de Doce
+#' sortear_marmita(tipo = "Doce")
+#'
+#' # refeicoes com preco de no maximo R$ 20,00
+#' sortear_marmita(preco_maximo = 20)
 sortear_marmita <-
   function(tipo = c("Sopa", "Prato", "Doce"), preco_maximo = 50) {
-    marmitas_veganas %>%
+    marmita_vegana %>%
       dplyr::filter(preco <= preco_maximo, tipo_refeicao %in% tipo) %>%
       dplyr::slice_sample() %>%
       dplyr::mutate(
