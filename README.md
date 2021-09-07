@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# marmitavegana <img src="man/figures/marmitavegana-hex.png" align="right" width = "120px"/>
+# marmitavegana <img src="man/figures/marmitavegana_hex.png" align="right" width = "120px"/>
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -54,11 +54,11 @@ tenha valor inferior a R$ 40,00 pode ser feita utilizando a função
 
 ``` r
 sortear_marmita(tipo = "Prato", preco_maximo = 40)
-#> Refeicao  sugerida: MACARONI COM CHEDDAR DE CASTANHAS 
+#> Refeicao  sugerida: BOWL DE GRÃO DE BICO E TOMATE CONFIT 
 #> 
-#> Ingredientes: Farofa de sementes e espinafre refogado 
+#> Ingredientes: Couve-flor na páprica e vegetais mediterrâneos 
 #> 
-#> Preco: R$ 28.9 
+#> Preco: R$ 20.9 
 #> 
-#> Acesse o site: https://www.beleaf.com.br/macaroni-com-cheddar-de-castanhas
+#> Acesse o site: https://www.beleaf.com.br/bowl-de-grao-de-bico-e-tomate-confit
 ```
