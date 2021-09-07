@@ -1,15 +1,17 @@
 Package: marmitavegana
-Title: What the Package Does (One Line, Title Case)
+Title: Comida vegana
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Samuel",
+           family = "Silva",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+           email = "antonio.sasilva@ufrpe.com",
+           comment = c(ORCID = "0000-0002-8759-0036"))
+Description: O pacote permite acesso a pratos de comida vegana disponíveis no cardapio do restaurante virtual, bem como o preco das refeicoes e os ingredientes utilizados na preparacao.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+URL: https://github.com/s4muelsilv4/marmitavegana
+BugReports: https://github.com/s4muelsilv4/marmitavegana/issues
