@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# marmitavegana
+# marmitavegana <img src="man/figures/marmitavegana-hex.png" align="right" width = "120px"/>
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -54,11 +54,11 @@ tenha valor inferior a R$ 40,00 pode ser feita utilizando a função
 
 ``` r
 sortear_marmita(tipo = "Prato", preco_maximo = 40)
-#> Refeicao  sugerida: GRÃO DE BICO E MANGA AO MOLHO DE TAHINE 
+#> Refeicao  sugerida: MACARONI COM CHEDDAR DE CASTANHAS 
 #> 
-#> Ingredientes: Vegetais marroquinos, quinoa vermelha 
+#> Ingredientes: Farofa de sementes e espinafre refogado 
 #> 
-#> Preco: R$ 24.8 
+#> Preco: R$ 28.9 
 #> 
-#> Acesse o site: https://www.beleaf.com.br/grao-de-bico-e-manga-ao-molho-de-tahine
+#> Acesse o site: https://www.beleaf.com.br/macaroni-com-cheddar-de-castanhas
 ```

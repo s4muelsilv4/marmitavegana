@@ -16,7 +16,7 @@ library(magrittr)
 library(DT)
 ```
 
-# marmitavegana
+# marmitavegana <img src="man/figures/marmitavegana-hex.png" align="right" width = "120px"/>
 
 <!-- badges: start -->
 <!-- badges: end -->
