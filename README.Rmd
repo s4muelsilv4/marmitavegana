@@ -24,7 +24,7 @@ Este pacote disponibiliza o cardápio de comida vegana do restaurante virtual [b
 
 ## Instalação
 
-O pacote `marmitavegana` está em desenvolvimento. A versão em progresso pode ser instalada a partir no [GitHub](https://github.com/) como segue:
+O pacote `marmitavegana` está em desenvolvimento. A versão em progresso pode ser instalada a partir do [GitHub](https://github.com/) como segue:
 
 ``` r
 # install.packages("devtools")
@@ -46,9 +46,7 @@ buscar_marmitas_veganas() %>%
   head(5) %>% 
   knitr::kable()
 ```
-Neste exemplo apenas 5 pratos, `head(5)`, foram mostrados.
-
-A escolha aleatória de uma refeição (`"Prato"`, `"Sopa"`, `"Doce"`) que tenha valor inferior a R$ 40,00 pode ser feita utilizando a função `sortear_marmita`, conforme mostrado a seguir:
+Neste exemplo apenas 5 pratos, `head(5)`, foram mostrados. A escolha aleatória de uma refeição (`"Prato"`, `"Sopa"`, `"Doce"`) que tenha valor inferior a R$ 40,00 pode ser feita utilizando a função `sortear_marmita`, conforme mostrado a seguir:
 
 ```{r ex. sortear_marmita}
 sortear_marmita(tipo = "Prato", preco_maximo = 40)

@@ -12,7 +12,7 @@ virtual [beleaf](https://www.beleaf.com.br/cardapio-marmitas-veganas)
 ## Instalação
 
 O pacote `marmitavegana` está em desenvolvimento. A versão em progresso
-pode ser instalada a partir no [GitHub](https://github.com/) como segue:
+pode ser instalada a partir do [GitHub](https://github.com/) como segue:
 
 ``` r
 # install.packages("devtools")
@@ -46,19 +46,18 @@ buscar_marmitas_veganas() %>%
 | 4    | YAKISOBA                          | Shiitake, brócolis e cenoura salteados  |  24.9 | Prato          | <https://www.beleaf.com.br/yakisoba>                          |
 | 5    | ARROZ BIRYANI DE JACA             | Couve-flor, ervilhas e mix de sementes  |  24.9 | Prato          | <https://www.beleaf.com.br/arroz-biryani-de-jaca>             |
 
-Neste exemplo apenas 5 pratos, `head(5)`, foram mostrados.
-
-A escolha aleatória de uma refeição (`"Prato"`, `"Sopa"`, `"Doce"`) que
-tenha valor inferior a R$ 40,00 pode ser feita utilizando a função
+Neste exemplo apenas 5 pratos, `head(5)`, foram mostrados. A escolha
+aleatória de uma refeição (`"Prato"`, `"Sopa"`, `"Doce"`) que tenha
+valor inferior a R$ 40,00 pode ser feita utilizando a função
 `sortear_marmita`, conforme mostrado a seguir:
 
 ``` r
 sortear_marmita(tipo = "Prato", preco_maximo = 40)
-#> Refeicao  sugerida: RAGU DEFUMADO DE JACA VERDE 
+#> Refeicao  sugerida: LASANHA DA CASA 
 #> 
-#> Ingredientes: Polenta cremosa e cenoura assada 
+#> Ingredientes: Molho bolonhesa e creme de castanhas com tofu 
 #> 
-#> Preco: R$ 23.9 
+#> Preco: R$ 28.9 
 #> 
-#> Acesse o site: https://www.beleaf.com.br/ragu-defumado-de-jaca-verde
+#> Acesse o site: https://www.beleaf.com.br/lasanha-da-casa
 ```
