@@ -12,7 +12,7 @@ sortear_marmita(tipo = c("Sopa", "Prato", "Doce"), preco_maximo = 50)
 \item{preco_maximo}{Um inteiro maior que zero}
 }
 \value{
-retorna um vetor de caracteres de comprimento 1
+Um vetor de caracteres
 }
 \description{
 Sortear aleatoriamente uma marmita disponivel no beleaf a partir do(s) tipo(s) de refeicao(oes) e de um preco maximo

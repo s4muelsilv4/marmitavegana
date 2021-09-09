@@ -7,7 +7,7 @@
 buscar_marmitas_veganas()
 }
 \value{
-retorna um tibble com 38 linhas e 6 colunas
+Uma tibble
 }
 \description{
 Exibir as marmitas vegenas disponiveis no beleaf
