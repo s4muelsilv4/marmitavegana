@@ -1,7 +1,7 @@
 # funcao 1. obter a base de marmitas -------------------------------------
 #' Exibir as marmitas vegenas disponiveis no beleaf
 #'
-#' @return retorna um tibble com 38 linhas e 6 colunas
+#' @return Uma tibble
 #' @export
 #'
 #' @examples
@@ -43,7 +43,7 @@ buscar_marmitas_veganas <- function() {
 #' @param tipo Um vetor de caracteres informando a refeicao: As opcoes disponiveis sao: "Sopa", "Prato", "Doce". O default e c("Sopa", "Prato", "Doce")
 #' @param preco_maximo Um inteiro maior que zero
 #'
-#' @return retorna um vetor de caracteres de comprimento 1
+#' @return Um vetor de caracteres
 #' @export
 #'
 #' @examples
