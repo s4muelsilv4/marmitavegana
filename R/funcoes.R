@@ -73,4 +73,3 @@ sortear_marmita <-
       ) %>%
       dplyr::pull(texto)
   }
-
