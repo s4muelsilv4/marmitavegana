@@ -1,8 +1,8 @@
 ---
-title: "exemplo-de-uso"
+title: "Exemplos de uso"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{exemplo-de-uso}
+  %\VignetteIndexEntry{Exemplos de uso}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -14,6 +14,66 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
+A base de dados contendo o cardápio atualizado de todas opções de marmitas  disponíveis no restaurante virtual [beleaf](https://www.beleaf.com.br/cardapio-marmitas-veganas) pode ser acessado por meio da função `buscar_marmitas_veganas`. Para uma breve explanação do pacote `{marimitasvegas}`, será utilizado os pacotes: `{ggplot2}`, `{dplyr}`, `{magrittr}`, `{DT}` e `{plotly}`.
+
+O código abaixo carrega esses pacotes. Caso não estejam instalados, é necessários instalá-los.
+
+```{r setup,message=FALSE,warning=FALSE}
 library(marmitavegana)
+library(ggplot2)
+library(dplyr)
+library(magrittr, include.only = "%>%")
+library(DT)
+library(plotly)
 ```
+
+Obter do cardápio de marmitas veganas atualizadas:
+
+```{r}
+marmitas <- buscar_marmitas_veganas()
+```
+
+A base `marmitas` pode ser combinada com a função `datatable` do pacote `{DT}` para produzir uma tabela formatada, contendo a opção para filtrar valores nas colunas.
+
+```{r}
+marmitas %>% 
+  datatable(rownames = FALSE,
+            filter = 'top', 
+            options = list(pageLength = 4, autoWidth = TRUE)
+  )
+```
+
+Abaixo segue código e gráfico mostrando como se distribui os preços dos pratos-refeições no cardápio (`marmitas`):
+
+```{r}
+marmitas %>% 
+  ggplot() +
+  geom_boxplot(aes(x=factor(tipo_refeicao,
+                            levels = c("Prato","Sopa","Doce")),y=preco),
+               fill="#5D8AA8") +
+  labs(x="Prato/Refeição",y="Preço (R$)") +
+  theme_bw() +
+  theme(text=element_text(size=12))
+```
+
+O código abaixo tem como saída a seleção aleatória de um prato (Prato, Sopa ou Doce) que custo um valor menor ou igual a R$ 30,00.
+
+```{r}
+sortear_marmita(tipo = c("Sopa", "Prato", "Doce"), 
+                preco_maximo = 30)
+```
+
+O código abaixo tem como saída a seleção aleatória de uma Sopa que custo um valor menor ou igual a R$ 27,00.
+
+```{r}
+sortear_marmita(tipo = "Sopa", 
+                preco_maximo = 27)
+```
+
+O código abaixo tem como saída a seleção aleatória de um Doce que custo um valor menor ou igual a R$ 13,00.
+
+```{r}
+sortear_marmita(tipo = "Doce", 
+                preco_maximo = 13)
+```
+
