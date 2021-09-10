@@ -17,8 +17,11 @@ URL: https://github.com/s4muelsilv4/marmitavegana
 BugReports: https://github.com/s4muelsilv4/marmitavegana/issues
 Imports: 
     dplyr,
+    DT,
+    ggplot2,
     glue,
     magrittr,
+    plotly,
     purrr,
     readr,
     stringr,
